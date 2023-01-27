@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
-def home_page(request):
-    return HttpResponse('Hello World!')
+class HomePage(TemplateView):
+    template_name = "home.html"
+# when i call HomePage ^ this file will be open in browser
+
+class AboutPage(TemplateView):
+    template_name = "about.html"
